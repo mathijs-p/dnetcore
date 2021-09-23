@@ -1,0 +1,22 @@
+﻿@model dnetcore.Models.ViewModels.UserViewModel
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+<div>
+    <form asp-controller="Login" asp-action="ProcessLogin" method="post">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div>
+            <label asp-for="Username"></label>
+            <input asp-for="Username" type="text" />
+            <span asp-validation-for="Username"></span>
+        </div>
+        <div>
+            <label asp-for="Password"></label>
+            <input asp-for="Password" type="password" />
+            <span asp-validation-for="Password"></span>
+        </div>
+        <input type="submit" value="Submit" />
+    </form>
+</div>
